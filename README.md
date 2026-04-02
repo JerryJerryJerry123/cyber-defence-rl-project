@@ -1,38 +1,34 @@
 # cyber-defence-rl-project
-# Autonomous Adaptive Cybersecurity System using Supervised and Reinforcement Learning
+# Autonomous Adaptive Cybersecurity System
 
 ## Overview
-This project implements a hybrid cybersecurity system that combines supervised learning and reinforcement learning to detect and respond to cyber attacks.
+This project implements a hybrid cybersecurity system combining supervised learning and reinforcement learning.
 
-The system uses a Random Forest classifier to identify attack types and a Q-learning agent to determine appropriate defensive actions.
+A Random Forest model detects cyber attacks, and a Q-learning agent selects defensive actions.
 
 ## Features
 - Intrusion detection using NSL-KDD dataset
-- Reinforcement learning-based decision making
+- Reinforcement learning-based defence
 - Epsilon-greedy exploration strategy
-- Comparison with static rule-based defence
-- Evaluation under detection noise
-
-## Technologies Used
-- Python
-- Scikit-learn
-- NumPy
-- Matplotlib
+- Static vs RL comparison
+- Noise robustness evaluation
 
 ## How it Works
-1. Network data is classified using a Random Forest model
-2. The predicted attack type is used as the RL state
-3. The Q-learning agent selects a defensive action
-4. Rewards guide the learning process
+1. Network traffic is classified
+2. Classification becomes RL state
+3. RL agent selects action
+4. Rewards guide learning
 
 ## Results
-- Classification accuracy ~74%
+- ~74% classification accuracy
 - RL converges to optimal policy
-- Static policy outperforms RL in deterministic environments
-- RL demonstrates adaptability under exploration
+- Static performs better in deterministic environments
+- RL shows adaptive learning behaviour
 
 ## Key Insight
-Reinforcement learning does not outperform static policies in deterministic environments, but provides a framework for adaptive defence in dynamic and uncertain conditions.
+Reinforcement learning is most effective in dynamic environments, not static ones.
 
 ## How to Run
-1. Install dependencies:
+```bash
+pip install -r requirements.txt
+jupyter notebook ids_detection.ipynb
