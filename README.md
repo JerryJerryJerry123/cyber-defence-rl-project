@@ -1,34 +1,51 @@
-# cyber-defence-rl-project
-# Autonomous Adaptive Cybersecurity System
+# Autonomous Adaptive Cybersecurity Using Supervised and Reinforcement Learning
 
 ## Overview
-This project implements a hybrid cybersecurity system combining supervised learning and reinforcement learning.
 
-A Random Forest model detects cyber attacks, and a Q-learning agent selects defensive actions.
+This project implements a hybrid cybersecurity system that combines supervised learning for intrusion detection with reinforcement learning for adaptive defence.
+
+The system classifies network traffic using a Random Forest model and uses Q-learning to determine appropriate defensive actions.
 
 ## Features
-- Intrusion detection using NSL-KDD dataset
-- Reinforcement learning-based defence
-- Epsilon-greedy exploration strategy
-- Static vs RL comparison
-- Noise robustness evaluation
 
-## How it Works
-1. Network traffic is classified
-2. Classification becomes RL state
-3. RL agent selects action
-4. Rewards guide learning
+* Intrusion detection using NSL-KDD dataset
+* Random Forest classification
+* Q-learning agent for decision-making
+* Evaluation using confusion matrix and reward metrics
+* Noise simulation for realistic testing
 
-## Results
-- ~74% classification accuracy
-- RL converges to optimal policy
-- Static performs better in deterministic environments
-- RL shows adaptive learning behaviour
+## Technologies Used
 
-## Key Insight
-Reinforcement learning is most effective in dynamic environments, not static ones.
+* Python
+* Scikit-learn
+* NumPy
+* Matplotlib
 
 ## How to Run
-```bash
+
+1. Install dependencies:
+
+```
 pip install -r requirements.txt
-jupyter notebook ids_detection.ipynb
+```
+
+2. Run the notebook:
+
+```
+jupyter notebook
+```
+
+## Results
+
+* Classification accuracy ~74%
+* Reinforcement learning converges to optimal policy
+* Performance evaluated under detection noise
+
+## Repository Structure
+
+* `notebook.ipynb` → Main implementation
+* `requirements.txt` → Dependencies
+
+## Author
+
+Jerry Lin
